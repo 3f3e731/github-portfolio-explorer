@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import gitHubHook from "../hooks/gitHubHook";
+import GitHubHook from "../hooks/GitHubHook";
 import SearchBar from "../components/SearchBar";
 import UserCard from "../components/UserCard";
 
@@ -8,7 +8,7 @@ const SearchPage = () => {
     const [query, setQuery] = useState("");
     const [users, setUsers] = useState([]);
 
-    const { serachUsers, loading } = gitHubHook();
+    const { serachUsers, loading } = GitHubHook();
 
     useEffect(() => {
         const timer = setTimeout(async () => {

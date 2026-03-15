@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import gitHubHook from "../hooks/gitHubHook";
+import GitHubHook from "../hooks/GitHubHook";
 import RepoCard from "../components/RepoCard";
 
 const UserProfile = () => {
     const { username } = useParams();
-    const { getUserProfile, getUserRepos } = gitHubHook();
+    const { getUserProfile, getUserRepos } = GitHubHook();
 
     const [user, setUser] = useState(null);
     const [repos, setRepos] = useState([]);
